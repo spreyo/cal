@@ -12,7 +12,7 @@ app.use(express.static(path.resolve("public")));
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) =>{
-    res.send(path.resolve(__dirname, 'asdf.ics') + "calendar");
+    res.sendFile(path.resolve("public", "webcal.ics"));
 })
 
 app.listen(3000, () => {
